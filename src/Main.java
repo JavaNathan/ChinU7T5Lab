@@ -1,17 +1,55 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
-public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        int[] numArray = {3, -2, 9, 38, -23, 9, 100, 9, 15, 38, 24, 16, 9};
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.println(" ----- TESTING PART A: linearSearchFirst -----");
+        System.out.println(Search.linearSearchFirst(numArray, 38));
+        System.out.println(Search.linearSearchFirst(numArray, 9));
+        System.out.println(Search.linearSearchFirst(numArray, 24));
+        System.out.println(Search.linearSearchFirst(numArray, 5));
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        System.out.println(" ----- TESTING PART B: linearSearchLast -----");
+        System.out.println(Search.linearSearchLast(numArray, 38));
+        System.out.println(Search.linearSearchLast(numArray, 9));
+        System.out.println(Search.linearSearchLast(numArray, 24));
+        System.out.println(Search.linearSearchLast(numArray, 5));
+
+        System.out.println(" ----- TESTING PART C: linearSearchFound -----");
+        System.out.println(Search.linearSearchFound(numArray, 38));
+        System.out.println(Search.linearSearchFound(numArray, 9));
+        System.out.println(Search.linearSearchFound(numArray, 24));
+        System.out.println(Search.linearSearchFound(numArray, 5));
+
+        System.out.println(" ----- TESTING PART D: linearSearchCount -----");
+        System.out.println(Search.linearSearchCount(numArray, 38));
+        System.out.println(Search.linearSearchCount(numArray, 9));
+        System.out.println(Search.linearSearchCount(numArray, 24));
+        System.out.println(Search.linearSearchCount(numArray, 5));
+
+        ArrayList<Integer> numArray2 = new ArrayList<Integer>(Arrays.asList(3, -2, 9, 38, -23, 9, 100, 9, 15, 38, 24, 16, 9));
+        System.out.println(" ----- TESTING PART E1: arraylist linearSearchFirst -----");
+        System.out.println(Search.linearSearchFirst(numArray2, 38));
+        System.out.println(Search.linearSearchFirst(numArray2, 9));
+        System.out.println(Search.linearSearchFirst(numArray2, 24));
+        System.out.println(Search.linearSearchFirst(numArray2, 5));
+
+        System.out.println(" ----- TESTING PART E2: arraylist linearSearchLast -----");
+        System.out.println(Search.linearSearchLast(numArray2, 38));
+        System.out.println(Search.linearSearchLast(numArray2, 9));
+        System.out.println(Search.linearSearchLast(numArray2, 24));
+        System.out.println(Search.linearSearchLast(numArray2, 5));
+
+        System.out.println(" ----- TESTING PART E3: arraylist linearSearchFound -----");
+        System.out.println(Search.linearSearchFound(numArray2, 38));
+        System.out.println(Search.linearSearchFound(numArray2, 9));
+        System.out.println(Search.linearSearchFound(numArray2, 24));
+        System.out.println(Search.linearSearchFound(numArray2, 5));
+
+        System.out.println(" ----- TESTING PART E4: arraylist linearSearchCount -----");
+        System.out.println(Search.linearSearchCount(numArray2, 38));
+        System.out.println(Search.linearSearchCount(numArray2, 9));
+        System.out.println(Search.linearSearchCount(numArray2, 24));
+        System.out.println(Search.linearSearchCount(numArray2, 5));
     }
 }
