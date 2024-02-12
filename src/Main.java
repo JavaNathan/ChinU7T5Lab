@@ -1,55 +1,38 @@
 import java.util.*;
 public class Main{
     public static void main(String[] args){
-        int[] numArray = {3, -2, 9, 38, -23, 9, 100, 9, 15, 38, 24, 16, 9};
+        System.out.println("---- TESTING PART B ----");
+        RepairSchedule r = new RepairSchedule(6);
 
-        System.out.println(" ----- TESTING PART A: linearSearchFirst -----");
-        System.out.println(Search.linearSearchFirst(numArray, 38));
-        System.out.println(Search.linearSearchFirst(numArray, 9));
-        System.out.println(Search.linearSearchFirst(numArray, 24));
-        System.out.println(Search.linearSearchFirst(numArray, 5));
+        boolean repair1 = r.addRepair(3, 4);
+        System.out.println(r.getSchedule());
+        System.out.println(repair1);
+        System.out.println("--------------");
 
-        System.out.println(" ----- TESTING PART B: linearSearchLast -----");
-        System.out.println(Search.linearSearchLast(numArray, 38));
-        System.out.println(Search.linearSearchLast(numArray, 9));
-        System.out.println(Search.linearSearchLast(numArray, 24));
-        System.out.println(Search.linearSearchLast(numArray, 5));
+        boolean repair2 = r.addRepair(0, 1);
+        System.out.println(r.getSchedule());
+        System.out.println(repair2);
+        System.out.println("--------------");
 
-        System.out.println(" ----- TESTING PART C: linearSearchFound -----");
-        System.out.println(Search.linearSearchFound(numArray, 38));
-        System.out.println(Search.linearSearchFound(numArray, 9));
-        System.out.println(Search.linearSearchFound(numArray, 24));
-        System.out.println(Search.linearSearchFound(numArray, 5));
+        boolean repair3 = r.addRepair(0, 2);
+        System.out.println(r.getSchedule());
+        System.out.println(repair3);
+        System.out.println("--------------");
 
-        System.out.println(" ----- TESTING PART D: linearSearchCount -----");
-        System.out.println(Search.linearSearchCount(numArray, 38));
-        System.out.println(Search.linearSearchCount(numArray, 9));
-        System.out.println(Search.linearSearchCount(numArray, 24));
-        System.out.println(Search.linearSearchCount(numArray, 5));
+        boolean repair4 = r.addRepair(2, 4);
+        System.out.println(r.getSchedule());
+        System.out.println(repair4);
+        System.out.println("--------------");
 
-        ArrayList<Integer> numArray2 = new ArrayList<Integer>(Arrays.asList(3, -2, 9, 38, -23, 9, 100, 9, 15, 38, 24, 16, 9));
-        System.out.println(" ----- TESTING PART E1: arraylist linearSearchFirst -----");
-        System.out.println(Search.linearSearchFirst(numArray2, 38));
-        System.out.println(Search.linearSearchFirst(numArray2, 9));
-        System.out.println(Search.linearSearchFirst(numArray2, 24));
-        System.out.println(Search.linearSearchFirst(numArray2, 5));
+        r.carOut(4);
+        System.out.println(r.getSchedule());
+        System.out.println("--------------");
 
-        System.out.println(" ----- TESTING PART E2: arraylist linearSearchLast -----");
-        System.out.println(Search.linearSearchLast(numArray2, 38));
-        System.out.println(Search.linearSearchLast(numArray2, 9));
-        System.out.println(Search.linearSearchLast(numArray2, 24));
-        System.out.println(Search.linearSearchLast(numArray2, 5));
+        boolean repair5 = r.addRepair(1, 4);
+        System.out.println(r.getSchedule());
+        System.out.println(repair5);
 
-        System.out.println(" ----- TESTING PART E3: arraylist linearSearchFound -----");
-        System.out.println(Search.linearSearchFound(numArray2, 38));
-        System.out.println(Search.linearSearchFound(numArray2, 9));
-        System.out.println(Search.linearSearchFound(numArray2, 24));
-        System.out.println(Search.linearSearchFound(numArray2, 5));
-
-        System.out.println(" ----- TESTING PART E4: arraylist linearSearchCount -----");
-        System.out.println(Search.linearSearchCount(numArray2, 38));
-        System.out.println(Search.linearSearchCount(numArray2, 9));
-        System.out.println(Search.linearSearchCount(numArray2, 24));
-        System.out.println(Search.linearSearchCount(numArray2, 5));
+        System.out.println("\n---- TESTING PART C ----");
+        System.out.println(r.availableMechanics());
     }
 }
